@@ -1,0 +1,44 @@
+html {
+    font-family: "Roboto Slab";
+}
+
+body {
+    display: grid;
+    grid-template: 1fr 3fr / 0.75fr 1.25fr;
+    grid-template-areas: 
+        "name contact"
+        "nav cont";
+}
+
+.name {
+    grid-area: name;
+}
+
+.name h1 {
+    font-weight: lighter;
+    font-size: 64px;
+    margin: 0px 5px;
+}
+
+.name h2 {
+    font-weight: lighter;
+    font-size: 20px;
+    margin: 0px 5px;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.contact h3 {
+    float: right;
+}
+
+nav {
+    grid-area: nav;
+}
+
+.content {
+    grid-area: cont;
+    position: relative;
+}
