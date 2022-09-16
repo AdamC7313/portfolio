@@ -71,6 +71,10 @@ nav {
     margin-bottom: 36px;
 }
 
+.nav-button:hover {
+    cursor: pointer; 
+}
+
 .content {
     grid-area: cont;
     position: relative;
