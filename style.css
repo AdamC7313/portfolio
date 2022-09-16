@@ -50,12 +50,39 @@ html {
 
 .contact {
     grid-area: contact;
+    display: grid;
+    position: relative;
+    grid-template: 50px / 80px 40px 40px;
+    justify-self: right;
+    align-self: center;
 }
 
+.contact-button {
+    position: relative;
+    font-size: 25px;
+    justify-self: center;
+    align-self: end;
+    color: #E7AB79;
+}
 .contact h3 {
-    float: right;
+    position: relative;
+    align-self: end;
+    margin: 0px 0px 8px 0px;
 }
 
+.contact-text {
+    position: absolute;
+    right: 68px;
+    top: 140px;
+}
+
+.e-mail {
+    font-size: 30px;
+}
+
+.linkedin {
+    margin-bottom: 2px !important;
+}
 nav {
     grid-area: nav;
 }
