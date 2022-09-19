@@ -55,13 +55,22 @@ html {
     align-self: center;
 }
 
-.contact-button {
+.contact-container {
     position: relative;
     font-size: 25px;
     justify-self: center;
     align-self: end;
+    z-index: 10;
+}
+
+.contact-container a {
     color: #E7AB79;
 }
+
+.linkedin {
+    margin-bottom: 5px;
+}
+
 .contact h3 {
     position: relative;
     align-self: end;
@@ -132,24 +141,24 @@ nav {
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #4C3A51;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #E7AB79;
-    opacity: 0.8;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #e7b790;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+background: #4C3A51;
+}
 
-  ::-webkit-scrollbar-corner {
-    background: #4C3A51;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #E7AB79;
+opacity: 0.8;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #e7b790;
+}
+
+::-webkit-scrollbar-corner {
+background: #4C3A51;
+}
