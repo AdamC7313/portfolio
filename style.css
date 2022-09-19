@@ -103,6 +103,7 @@ nav {
 .content {
     grid-area: cont;
     position: relative;
+    overflow: scroll;
 }
 
 .content span {
@@ -127,3 +128,28 @@ nav {
 .projects ul {
     list-style-type: none;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #4C3A51;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #E7AB79;
+    opacity: 0.8;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e7b790;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: #4C3A51;
+  }

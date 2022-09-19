@@ -2,8 +2,8 @@ let homeButton = document.getElementById("home-button")
 let aboutmeButton = document.getElementById("aboutme-button")
 let projectsButton = document.getElementById("projects-button")
 let skillsButton = document.getElementById("skills-button")
-let linkedinButton = document.getElementsByClassName("contact-button")[0]
-let emailButton = document.getElementsByClassName("contact-button")[1]
+let linkedinButton = document.getElementsByClassName("linkedin-container")[0]
+let emailButton = document.getElementsByClassName("email-container")[0]
 
 let homeContent = document.getElementsByClassName("content")[0]
 let aboutmeContent = document.getElementsByClassName("content")[1]
@@ -99,6 +99,7 @@ skillsButton.onclick = function() {
 
 linkedinButton.onmouseover = function() {
     linkedinText.hidden = false;
+    fade_func(linkedinText, "linkedin-text")
 }
 
 linkedinButton.onmouseout = function() {
