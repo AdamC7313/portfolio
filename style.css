@@ -20,10 +20,11 @@ html {
 
 .page-contents {
     display: grid;
-    grid-template: 1fr 3fr / 0.75fr 1.25fr;
+    grid-template: 1fr 1fr 1fr / 0.75fr 1.25fr;
     grid-template-areas: 
-        "name contact"
-        "nav cont";
+        "name name contact"
+        "nav cont cont"
+        ". cont cont";
     padding: 10px 30px;
     border: 3px solid #B25608;
     height: 100%;
@@ -52,7 +53,7 @@ html {
     position: relative;
     grid-template: 50px / 80px 40px 40px;
     justify-self: right;
-    align-self: center;
+    align-self: top;
 }
 
 .contact-container {
@@ -67,8 +68,8 @@ html {
     color: #E7AB79;
 }
 
-.linkedin {
-    margin-bottom: 5px;
+#linkedin-container {
+    margin-bottom: 3px;
 }
 
 .contact h3 {
@@ -103,6 +104,40 @@ nav {
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 36px;
+    width: 100%;
+}
+
+.nav-button:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: relative;
+    background: #E7AB79;
+    transition: width 0.3s ease 0s, right 0.3s ease 0s;
+    width: 0;
+}
+
+#home-button:hover:after { 
+width: 68px; 
+right: 0; 
+}
+
+#aboutme-button:hover:after { 
+width: 110px; 
+left: 0; 
+}
+
+#projects-button:hover:after { 
+width: 90px; 
+left: 0; 
+}
+
+#skills-button:hover:after { 
+width: 64px; 
+left: 0; 
 }
 
 .nav-button:hover {
