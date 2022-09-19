@@ -12,10 +12,6 @@ let skillsContent = document.getElementsByClassName("content")[3]
 let linkedinText = document.getElementById("linkedin")
 let emailText = document.getElementById("email")
 
-const aboutme_text = document.querySelector(".about-me");
-const aboutme_strText = aboutme_text.textContent;
-const aboutme_splitText = aboutme_strText.split(/\r?\n|\r|\n/g)
-
 homeContent.hidden = false;
 aboutmeContent.hidden = true;
 projectsContent.hidden = true;
@@ -28,8 +24,6 @@ function fade_func(target, length){
     let timer = setInterval(onTick,100);
     function onTick(){
         const span = target.querySelectorAll('span')[line];
-        console.log(span)
-        console.log(aboutme_splitText.length)
         span.classList.add('fade');
         line++;
         if(line === length){
@@ -44,7 +38,6 @@ function clear_fade_class(target, length){
     let timer = setInterval(onTick,0);
     function onTick(){
         const span = target.querySelectorAll('span')[line];
-        console.log(span)
         span.classList.remove('fade')
         line++
         if(line === length){
@@ -52,14 +45,21 @@ function clear_fade_class(target, length){
             timer = null;
         }
     }
-}   
+}  
+
+window.onload = (event) => {
+    event = fade_func(homeContent, 1)
+}
 
 homeButton.onclick = function() {
     homeContent.hidden = false;
     aboutmeContent.hidden = true;
     projectsContent.hidden = true;
     skillsContent.hidden = true;
-    clear_fade_class(aboutme_text, 7)
+    fade_func(homeContent, 1);
+    clear_fade_class(aboutmeContent, 7);
+    clear_fade_class(projectsContent, 4);
+    clear_fade_class(skillsContent, 1);
 }
 
 aboutmeButton.onclick = function() {
@@ -67,7 +67,10 @@ aboutmeButton.onclick = function() {
     aboutmeContent.hidden = false;
     projectsContent.hidden = true;
     skillsContent.hidden = true;
-    fade_func(aboutme_text, 7)
+    fade_func(aboutmeContent, 7);
+    clear_fade_class(homeContent, 1);
+    clear_fade_class(projectsContent, 4);
+    clear_fade_class(skillsContent, 1);
 }
 
 projectsButton.onclick = function() {
@@ -75,6 +78,10 @@ projectsButton.onclick = function() {
     aboutmeContent.hidden = true;
     projectsContent.hidden = false;
     skillsContent.hidden = true;
+    fade_func(projectsContent, 4);
+    clear_fade_class(homeContent, 1);
+    clear_fade_class(aboutmeContent, 7);
+    clear_fade_class(skillsContent, 1);
 }
 
 skillsButton.onclick = function() {
@@ -82,6 +89,10 @@ skillsButton.onclick = function() {
     aboutmeContent.hidden = true;
     projectsContent.hidden = true;
     skillsContent.hidden = false;
+    fade_func(skillsContent, 1);
+    clear_fade_class(homeContent, 1);
+    clear_fade_class(projectsContent, 4);
+    clear_fade_class(aboutmeContent, 7);
 }
 
 linkedinButton.onmouseover = function() {

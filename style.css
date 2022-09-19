@@ -105,14 +105,18 @@ nav {
     position: relative;
 }
 
-.about-me span {
+.content span {
     opacity: 0;
     transition: all 1s ease;
     display: inline-block;
     transform: translateY(50px);
 }
 
-.about-me span.fade {
+.content span.fade {
     opacity: 1;
     transform: translateY(0px);
+}
+
+.projects span {
+    display: block !important;
 }
