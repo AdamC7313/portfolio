@@ -150,7 +150,9 @@ left: 0;
 .content {
     grid-area: cont;
     position: relative;
-    overflow-y: scroll;
+    overflow: auto;
+    height: 573px;
+    z-index: 0;
 }
 
 .content span {
@@ -182,10 +184,6 @@ left: 0;
 .about-me-title {
     font-size: 32px;
     font-weight: bold;
-}
-
-.about-me {
-    overflow-y: scroll;
 }
 
 .projects .title {

@@ -53,6 +53,10 @@ window.onload = (event) => {
 }
 
 homeButton.onclick = function() {
+    homeContent.style.zIndex = "10";
+    aboutmeContent.style.zIndex = "0";
+    projectsContent.style.zIndex = "0";
+    skillsContent.style.zIndex = "0";
     homeContent.hidden = false;
     aboutmeContent.hidden = true;
     projectsContent.hidden = true;
@@ -64,6 +68,10 @@ homeButton.onclick = function() {
 }
 
 aboutmeButton.onclick = function() {
+    homeContent.style.zIndex = "0";
+    aboutmeContent.style.zIndex = "10";
+    projectsContent.style.zIndex = "0";
+    skillsContent.style.zIndex = "0";
     homeContent.hidden = true;
     aboutmeContent.hidden = false;
     projectsContent.hidden = true;
@@ -75,6 +83,10 @@ aboutmeButton.onclick = function() {
 }
 
 projectsButton.onclick = function() {
+    homeContent.style.zIndex = "0";
+    aboutmeContent.style.zIndex = "0";
+    projectsContent.style.zIndex = "10";
+    skillsContent.style.zIndex = "0";
     homeContent.hidden = true;
     aboutmeContent.hidden = true;
     projectsContent.hidden = false;
@@ -86,6 +98,10 @@ projectsButton.onclick = function() {
 }
 
 skillsButton.onclick = function() {
+    homeContent.style.zIndex = "0";
+    aboutmeContent.style.zIndex = "0";
+    projectsContent.style.zIndex = "0";
+    skillsContent.style.zIndex = "10";
     homeContent.hidden = true;
     aboutmeContent.hidden = true;
     projectsContent.hidden = true;
