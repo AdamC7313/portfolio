@@ -167,8 +167,13 @@ left: 0;
 
 .home h1 {
     margin-top: 0px;
+    font-family: Inconsolata;
+    font-size: 56px;
 }
 
+.home h2 {
+    font-weight: 400;
+}
 .about-me p {
     margin-top: 0px;
 }
@@ -183,6 +188,7 @@ left: 0;
 .projects ul {
     list-style-type: none;
     margin-top: 0px;
+    padding-left: 0px;
 }
 
 .top-project {
@@ -286,7 +292,7 @@ background: #4C3A51;
         display: block;
     }
     .content.about-me, .content.projects {
-        padding-right: 5px;
+        padding-right: 10px;
     }
     #home-button:hover:after { 
     width: 56px; 
@@ -308,4 +314,16 @@ background: #4C3A51;
     left: 0; 
     }
 
+}
+
+@media only screen and (max-width: 450px) {
+    .name h1 {
+        font-size: 50px;
+    }
+    .nav-bar {
+        width: 100%;
+    }
+    .home h1 {
+        font-size: 42px;
+    }
 }
