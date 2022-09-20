@@ -24,8 +24,8 @@ html {
     grid-template-areas: 
         "name name contact"
         "nav cont cont"
-        ". cont cont";
-    padding: 10px 30px;
+        "nav cont cont";
+    padding: 10px 30px 30px 30px;
     border: 3px solid #B25608;
     height: 100%;
 }
@@ -216,4 +216,96 @@ background: #e7b790;
 
 ::-webkit-scrollbar-corner {
 background: #4C3A51;
+}
+
+@media only screen and (max-height: 640px) {
+    .name h1 {
+        font-size: 50px;
+    }
+    .name h2 {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        padding: 15px 15px 0px 15px;
+        height: 90%;
+    }
+    .name {
+        grid-column: 1 / 4;
+        align-self: center;
+    }
+
+    .name h2 {
+        padding-top: 10px;
+    }
+
+    .name h2, .name h1, .content {
+        text-align: center;
+    }
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        grid-area: 1 / 1 / 2 / 4;
+        align-content:center;
+        padding-bottom: 5px;
+    }
+    .nav-button {
+        display: inline-block;
+        font-size: 20px;
+        margin-bottom: 0px;
+        align-self:flex-end;
+    }
+    #home-button {
+        width: 56px;
+    }
+    #aboutme-button {
+        width: 92px;
+    }
+    #projects-button {
+        width: 76px;
+    }
+    #skills-button {
+        width: 54px;
+    }
+    .content {
+        grid-area: 2 / 1 / 4 / 4;
+        align-self: center;
+        height: 500px;
+        overflow: auto;
+    }
+    .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .home span {
+        align-items: center;
+        display: block;
+    }
+    .content.about-me, .content.projects {
+        padding-right: 5px;
+    }
+    #home-button:hover:after { 
+    width: 56px; 
+    right: 0; 
+    }
+    
+    #aboutme-button:hover:after { 
+    width: 92px; 
+    left: 0; 
+    }
+    
+    #projects-button:hover:after { 
+    width: 76px; 
+    left: 0; 
+    }
+    
+    #skills-button:hover:after { 
+    width: 54px; 
+    left: 0; 
+    }
+
 }
