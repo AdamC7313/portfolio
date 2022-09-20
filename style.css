@@ -150,7 +150,7 @@ left: 0;
 .content {
     grid-area: cont;
     position: relative;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .content span {
@@ -174,8 +174,18 @@ left: 0;
 .home h2 {
     font-weight: 400;
 }
+
 .about-me p {
     margin-top: 0px;
+}
+
+.about-me-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.about-me {
+    overflow-y: scroll;
 }
 
 .projects .title {
@@ -197,6 +207,29 @@ left: 0;
 
 .skills h1 {
     margin-top: 0px;
+    font-size: 48px
+}
+
+.skills {
+    display: grid;
+    grid-template: 1fr 6fr / 1fr;
+}
+
+.skills-container {
+    display: flex;
+    height: 38px;
+    align-items: center;
+}
+
+.skill {
+    font-size: 38px;
+}
+
+.skill-description {
+    position: relative;
+    font-size: 24px;
+    padding-bottom: 10px;
+    margin-right: 20px;
 }
 
 /* width */
@@ -279,7 +312,6 @@ background: #4C3A51;
         grid-area: 2 / 1 / 4 / 4;
         align-self: center;
         height: 500px;
-        overflow: auto;
     }
     .home {
         display: flex;
