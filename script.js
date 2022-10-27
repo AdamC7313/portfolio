@@ -10,7 +10,6 @@ let skillsContent = document.getElementsByClassName("content")[3]
 let linkedinText = document.getElementById("linkedin")
 let emailText = document.getElementById("email")
 
-document.getElement
 homeContent.hidden = false;
 aboutmeContent.hidden = true;
 projectsContent.hidden = true;
